@@ -1,48 +1,48 @@
-# PancakeSwap v2 Subgraph
+PieSwap v2 Subgraph
 
-[PancakeSwap](https://pancakeswap.finance/) is a decentralized protocol for automated token exchange on Binance Smart Chain.
+PieSwap is a decentralized protocol for automated token exchange on Okex Smart Chain.
 
-This subgraph dynamically tracks any pair created by the uniswap factory. It tracks of the current state of PancakeSwap contracts, and contains derived stats for things like historical data and USD prices.
+This subgraph dynamically tracks any pair created by the uniswap factory. It tracks of the current state of PieSwap contracts, and contains derived stats for things like historical data and USD prices.
 
 - aggregated data across pairs and tokens,
 - data on individual pairs and tokens,
 - data on transactions
 - data on liquidity providers
-- historical data on PancakeSwap, pairs or tokens, aggregated by day
+- historical data on PieSwap, pairs or tokens, aggregated by day
 
-## Running Locally
+Running Locally:
 
 Make sure to update package.json settings to point to your own graph account.
 
-## Queries
+Queries:
 
 Below are a few ways to show how to query the uniswap-subgraph for data. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the [querying api](https://thegraph.com/docs/graphql-api). These queries can be used locally or in The Graph Explorer playground.
 
-## Key Entity Overviews
+Key Entity Overviews:
 
-#### UniswapFactory
+UniswapFactory:
 
-Contains data across all of PancakeSwap v2. This entity tracks important things like total liquidity (in ETH and USD, see below), all time volume, transaction count, number of pairs and more.
+Contains data across all of PieSwap v2. This entity tracks important things like total liquidity (in ETH and USD, see below), all time volume, transaction count, number of pairs and more.
 
-#### Token
+Token:
 
 Contains data on a specific token. This token specific data is aggregated across all pairs, and is updated whenever there is a transaction involving that token.
 
-#### Pair
+Pair:
 
 Contains data on a specific pair.
 
-#### Transaction
+Transaction:
 
-Every transaction on PancakeSwap is stored. Each transaction contains an array of mints, burns, and swaps that occured within it.
+Every transaction on PieSwap is stored. Each transaction contains an array of mints, burns, and swaps that occured within it.
 
-#### Mint, Burn, Swap
+Mint, Burn, Swap:
 
 These contain specifc information about a transaction. Things like which pair triggered the transaction, amounts, sender, recipient, and more. Each is linked to a parent Transaction entity.
 
-## Example Queries
+Example Queries:
 
-### Querying Aggregated PancakeSwap Data
+Querying Aggregated PieSwap Data :
 
 This query fetches aggredated data from all uniswap pairs and tokens, to give a view into how much activity is happening within the whole protocol.
 
