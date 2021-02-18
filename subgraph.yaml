@@ -1,6 +1,6 @@
 specVersion: 0.0.2
-description: PancakeSwap is a decentralized protocol for automated token exchange on Binance Smart Chain.
-repository: https://github.com/pancakeswap/pancakeswap-v2-subgraph
+description: PieSwap is a decentralized protocol for automated token exchange on Okex Smart Chain.
+repository: https://github.com/pieswap/pieswap-v2-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
